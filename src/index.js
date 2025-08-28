@@ -11,7 +11,11 @@ import path from "path";
 
 app.use(
   cors({
-    origin: true,
+    origin: [
+      "http://localhost:3000",
+      "http://72.60.41.172:3000",
+      "http://72.60.41.172:5001",
+    ],
     credentials: true,
   })
 );

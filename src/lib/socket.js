@@ -8,7 +8,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://72.60.41.172:3000", "http://72.60.41.172:3001"],
+    origin: [
+      "http://72.60.41.172:5001",
+      "http://72.60.41.172:3000",
+      "http://localhost:3000",
+    ],
   },
 });
 

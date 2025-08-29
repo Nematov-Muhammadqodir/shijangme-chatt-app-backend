@@ -8,6 +8,7 @@ export const generateToken = (userId, res) => {
   res.cookie("jwt", token, {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     httpOnly: false,
+    domain: ".kadai.uz",
   });
   return token;
 };

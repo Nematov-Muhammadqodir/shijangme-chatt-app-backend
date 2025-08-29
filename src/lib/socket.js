@@ -12,6 +12,7 @@ const io = new Server(server, {
       "http://72.60.41.172:5001",
       "http://72.60.41.172:3000",
       "http://localhost:3000",
+      "http://kadai.uz",
     ],
   },
 });

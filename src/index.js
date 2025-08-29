@@ -15,6 +15,7 @@ app.use(
       "http://localhost:3000",
       "http://72.60.41.172:3000",
       "http://72.60.41.172:5001",
+      "http://kadai.uz",
     ],
     credentials: true,
   })

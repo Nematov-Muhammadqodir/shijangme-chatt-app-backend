@@ -12,10 +12,10 @@ import path from "path";
 app.use(
   cors({
     origin: [
+      "http://kadai.uz",
       "http://localhost:3000",
       "http://72.60.41.172:3000",
       "http://72.60.41.172:5001",
-      "http://kadai.uz",
     ],
     credentials: true,
   })

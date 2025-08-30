@@ -1,17 +1,9 @@
 import jwt from "jsonwebtoken";
 
-export const generateToken = (userId, res) => {
-  const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expiresIn: "7d",
-  });
+export const signToken = (userId) =>
+  jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
 
-  res.cookie("jwt", token, {
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    httpOnly: false,
-    domain: ".kadai.uz",
-  });
-  return token;
-};
+export const verifyToken = (token) => jwt.verify(token, process.env.JWT_SECRET);
 
 // export const generateToken = (userId, res) => {
 //   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {

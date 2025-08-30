@@ -12,9 +12,7 @@ import makeUploader from "../lib/uploader.js";
 const router = express.Router();
 
 router.post("/signup", signup);
-
 router.post("/login", login);
-
 router.post("/logout", logout);
 
 router.put(
@@ -24,6 +22,7 @@ router.put(
   updateProfile
 );
 
+// Returns the authed user if token is valid
 router.get("/check", protectRoute, checkAuth);
 
 export default router;
